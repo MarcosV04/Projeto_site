@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat do Amor 💬</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <h2>Chat entre vocês 💖</h2>
+  <form method="POST">
+    <input type="text" name="message" placeholder="Escreva algo..." required>
+    <button type="submit">Enviar</button>
+  </form>
+  
+  <div>
+    {% for msg in messages %}
+      <p>
+        <strong>{{ "Você" if msg.sender_id == current_user.id else "Seu amor" }}:</strong>
+        {{ msg.content }} <br>
+        <small>{{ msg.timestamp.strftime('%d/%m %H:%M') }}</small>
+      </p>
+    {% endfor %}
+  </div>
+
+  <br>
+  <a href="/">Voltar à página inicial</a> | <a href="/logout">Sair</a>
+</body>
+</html>
