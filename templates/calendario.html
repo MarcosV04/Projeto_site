@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nosso Calendário 💑</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fff0f5;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        h1 {
+            color: #c2185b;
+        }
+        .info {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>💖 Nosso Amor no Tempo 💖</h1>
+        <div class="info">Começamos em: <strong>{{ data_inicio }}</strong></div>
+        <div class="info">Estamos juntos há: <strong>{{ dias_juntos }} dias</strong></div>
+        <div class="info">Próximo mesversário: <strong>{{ proximo_mesversario }}</strong></div>
+        <div class="info">Faltam <strong>{{ dias_para_mesversario }}</strong> dias!</div>
+        <a href="/chat">← Voltar para o chat</a>
+    </div>
+</body>
+</html>
